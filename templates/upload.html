@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Room</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<div class="container">
+<div class="card">
+<h2>Upload Room Image</h2>
+
+<form method="POST" enctype="multipart/form-data">
+    <input type="file" name="image" required><br>
+
+    <select name="style">
+        <option>Modern</option>
+        <option>Traditional</option>
+        <option>Minimalist</option>
+        <option>Luxury</option>
+    </select><br>
+
+    <select name="language">
+        <option value="en">English</option>
+        <option value="hi">Hindi</option>
+        <option value="te">Telugu</option>
+    </select><br>
+
+    <button type="submit">Generate AI Design</button>
+</form>
+</div>
+</div>
+
+</body>
+</html>

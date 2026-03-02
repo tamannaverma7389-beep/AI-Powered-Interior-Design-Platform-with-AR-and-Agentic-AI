@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<div class="container">
+<div class="card">
+
+<h2>Dashboard</h2>
+
+<h3>Design History</h3>
+{% for d in designs %}
+<p>{{ d.style_selected }} - {{ d.created_at }}</p>
+{% endfor %}
+
+<hr>
+
+<h3>Bookings</h3>
+{% for b in bookings %}
+<p>{{ b.furniture_name }} - {{ b.status }}</p>
+{% endfor %}
+
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gruha Alankara</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <h1>Gruha Alankara</h1>
+        <p>AI Powered Interior Design Platform</p>
+        <a href="/upload"><button>Start Designing</button></a>
+    </div>
+</div>
+<video id="camera" autoplay width="600"></video>
+<canvas id="overlay" width="600" height="400"></canvas>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<script src="{{ url_for('static', filename='js/ar_overlay.js') }}"></script>
+</body>
+</html>

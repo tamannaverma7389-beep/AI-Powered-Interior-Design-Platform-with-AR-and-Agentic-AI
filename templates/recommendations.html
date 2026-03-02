@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Recommendations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <h1>AI Design Recommendation</h1>
+
+    <h3>Uploaded Room:</h3>
+    <img src="/{{ image }}" width="400">
+
+    <h3>AI Suggestion:</h3>
+    <p>{{ result }}</p>
+
+    <h3>Furniture Items:</h3>
+
+    {% if furniture_items %}
+        {% for item in furniture_items %}
+            <div>
+                <p>{{ item.tag }}</p>
+                <img src="{{ item.image_path }}" width="200">
+                <br>
+                <a href="{{ url_for('book', item=item.tag, language=language) }}">
+                    Book This
+                </a>
+            </div>
+            <hr>
+        {% endfor %}
+    {% else %}
+        <p>No furniture found for this style.</p>
+    {% endif %}
+
+</body>
+</html>
